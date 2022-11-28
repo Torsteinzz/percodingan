@@ -283,6 +283,19 @@
       clickable: true,
     },
   });
+  new Swiper(".swiper-weather", {
+    speed: 500,
+    loop: true,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+  });
 })();
 
 document.addEventListener("DOMContentLoaded", () => {

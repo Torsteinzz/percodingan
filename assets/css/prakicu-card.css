@@ -1,0 +1,20 @@
+#forecast-slider {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.swiper-weather {
+  min-width: 500px;
+  min-height: 500px;
+}
+.card-forecast {
+  background-color: teal;
+  background-image: url(../img/w-forecast-bg.jpg);
+  padding: 10px;
+  border-radius: 10px;
+  width: fit-content;
+  min-width: 200px;
+  margin: 0px 5px;
+  color: #ffffff;
+  text-align: center;
+}

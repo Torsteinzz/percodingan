@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link rel="shortcut icon" href="assets/img/bmkg.ico">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -22,10 +22,14 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/card.gempaterkini.css" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
 
   <!-- Template Main CSS File -->
+  <link href="assets/css/card.gempaterkini.css" rel="stylesheet">
+  <link href="assets/css/prakicu-card.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -68,7 +72,7 @@
   <div class="container d-flex justify-content-center justify-content-sm-between">
     <div class="container-sm d-flex align-items-center"></div>
       <a class="navbar-brand" href="index.html">
-        <img src="C:/Users/acer/Documents/project1/Green/img/bg_header2.png" alt="Logo" width="100%" height="100" class="d-inline-block align-text-top">
+        <img src="assets/img/bg_header2.png" alt="Logo" width="100%" height="100" class="d-inline-block align-text-top">
       </a>
     </div>
   </div>
@@ -176,11 +180,28 @@
                     <div class="section-title">
                       <h2>Prakiraan Cuaca Tiap Kecamatan Di Kabupaten Cilacap</h2>
                     </div>
-                      <div class="icon-box">
-                        <div class="forecast-block">
-                          <iframe src="http://www.meteoalor.id/rrr.php" scrolling="no" frameborder="no" style="border:0px solid black; height: 360px;
-                          right: 0px; width: 105%;"> </iframe>
+                      <div class="icon-box swiper swiper-weather">
+                        <div class="swiper-wrapper" id="forecast-slider">
+                          <!-- Slides Prakicu-->
+                          <div class="swiper-slide card-forecast">
+                            <div class="f-loc">Cilacap</div>
+                              <div class="f-time">14.00 WIB</div>
+                              <div class="f-wicon">Hujan</div>
+                              <div class="w-txt">Hujan</div>
+                              <div class="f-temp">24°C</div>
+                              <div class="f-link"><a href="#">Selengkapnya</a></div>
+                          </div>
+                          <div class="swiper-slide card-forecast">
+                            <div class="f-loc">Cilacap</div>
+                              <div class="f-time">14.00 WIB</div>
+                              <div class="f-wicon">Hujan</div>
+                              <div class="w-txt">Hujan</div>
+                              <div class="f-temp">24°C</div>
+                              <div class="f-link"><a href="#">Selengkapnya</a></div>
+                          </div>
+                          
                         </div>
+                        <div class="swiper-pagination"></div>
                       </div>
                     </div>
                     <!--------gempaaa-------------->
@@ -755,12 +776,13 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Get BMKG Data -->
   <script src="assets/js/jam.js"></script>
   <script src="assets/js/earthquake.js"></script>
+  <script src="assets/js/weather.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
