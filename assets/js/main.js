@@ -288,13 +288,13 @@
     loop: true,
     slidesPerView: 1,
     spaceBetween: 5,
-    slidesPerGroup: 1,
-    loop: true,
+    slidesPerGroup: 3,
     breakpoints: {
       // when window width is >= 480px
       200: {
         slidesPerView: 1,
         slidesPerGroup: 1,
+        spaceBetween: 5,
         loop: true,
       },
       900: {
