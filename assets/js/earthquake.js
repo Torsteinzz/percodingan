@@ -30,7 +30,7 @@ function renderQuakeCard(quakeData) {
   const CardLayout = document.querySelector(".card-gempa");
   const html = `
     <div class="row">
-                  <div class="col-md-6 col-6">
+                  <div class="col-md-6 col-sm-12">
                     <a href="https://ews.bmkg.go.id/tews/data/${
                       data.Shakemap
                     }" class="fancybox img-hover-v1" rel="gallery1" title="Gempabumi Terkini">
@@ -39,11 +39,11 @@ function renderQuakeCard(quakeData) {
                     }" alt="gempa terkini" width="200" height="190">
                     </a>
                   </div>
-                      <div class="col-md-6 col-6 gempabumi-detail no-padding">
+                      <div class="col-md-6 col-sm-12 gempabumi-detail no-padding">
                         <ul class="list-unstyled">
-                          <li><span class="waktu">${data.Tanggal}, ${
+                          <li><span class="waktu"><b>${data.Tanggal}, ${
     data.Jam
-  }</li>
+  }</b></span></li>
                           <li><span class="ic magnitude"></span>${
                             data.Magnitude
                           }</li>
@@ -53,29 +53,24 @@ function renderQuakeCard(quakeData) {
                           <li><span class="ic koordinat"></span>${
                             data.Lintang
                           } - ${data.Bujur}</li>
-                          <li><span class="ic lokasi"></span>${
-                            data.Wilayah
-                          } (${calculateDistance(
-    data.Coordinates
-  )} km dari Kab. Cilacap)</li>
-                          <li><span class="ic dirasakan"></span>${
-                            data.Dirasakan
-                          }</li>
-                          <li><a class="more" href="https://www.bmkg.go.id/gempabumi-dirasakan.html">Selengkapnya →</a></li>
-                        </ul>
+                         </ul>
                       </div>
                 </div>
-                <ul class="list-unstyled gempabumi-detail no-bot">
-                      <li><span class="ic lokasi"></span>${
-                        data.Wilayah
-                      } (${calculateDistance(
+                <div class="row">
+                  <div class="col-md-12 gempabumi-detail no-padding mt-3">
+                  <ul class="list-unstyled">
+                  <li><span class="ic lokasi"></span>${
+                    data.Wilayah
+                  } (${calculateDistance(
     data.Coordinates
   )} km dari Kab. Cilacap)</li>
-                      <li><span class="ic dirasakan"></span> Dirasakan (Skala MMI): ${
-                        data.Dirasakan
-                      }</li>
-                      <li><a class="more" href="https://www.bmkg.go.id/gempabumi-dirasakan.html">Selengkapnya →</a></li>
-                    </ul>
+                  <li><span class="ic dirasakan"></span>Dirasakan MMI: ${
+                    data.Dirasakan
+                  }</li>
+                  <li><a class="more" href="https://www.bmkg.go.id/gempabumi-dirasakan.html">Selengkapnya →</a></li>
+                </ul>
+                  </div>
+                </div>
     `;
   CardLayout.innerHTML = html;
 }

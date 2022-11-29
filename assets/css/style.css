@@ -110,6 +110,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   background: #fff;
   transition: all 0.5s;
@@ -292,6 +293,10 @@ h6 {
     display: block;
   }
 
+  .banner {
+    width: 100%;
+    height: auto;
+  }
   .navbar ul {
     display: none;
   }
@@ -1043,14 +1048,6 @@ html[lang="en"] .gempabumi-detail .koordinat:before {
   }
 }
 
-.card-gempa {
-  padding: 5px;
-  height: 350px;
-  box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
-  -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
-}
-
 /*---gempa bumi--*/
 
 /*-----perdin-----*/
@@ -1092,6 +1089,24 @@ html[lang="en"] .gempabumi-detail .koordinat:before {
   .peringatan-dini-home-head,
   .peringatan-dini-home-bg {
     border: none;
+  }
+  .peringatan-dini-home > .clearfix {
+    display: flex;
+    flex-direction: column;
+  }
+  .peringatan-dini-home-head {
+    margin-bottom: 5px;
+    display: block;
+  }
+  .owl-peringatan-dini {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 868px) {
+  .peringatan-dini-home-head,
+  .peringatan-dini-home-bg {
+    width: 100%;
   }
 }
 

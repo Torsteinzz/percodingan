@@ -1,15 +1,17 @@
 const FORECAST_URL =
   "https://api-cuaca-karimun.netlify.app/.netlify/functions/api/cuaca?kab=Kab.%20Cilacap";
 
-//const FORECAST_URL = "../dummy-data/forecast-cilacap.json";
-function getForecastClock(resDate) {
+let FORECAST_DATA = [];
+function getForecastClock() {
   const date = new Date();
   let bulan = formatNumber(date.getMonth() + 1);
   let tahun = formatNumber(date.getFullYear());
   let hari = formatNumber(date.getDate());
+  let fdate = `${tahun}-${bulan}-${hari}`;
+  let rdate = `${hari}-${bulan}-${tahun}`;
 
   //GET SHOW forecast clock
-  const hourRow = [0, 3, 6, 9, 12, 15, 18, 21];
+  const hourRow = [0, 3, 6, 9, 12, 15, 18, 21, 24];
   let showtime;
   let isAM = "am";
   hourRow.forEach((item) => {
@@ -18,20 +20,34 @@ function getForecastClock(resDate) {
       showtime = item;
     }
   });
-  if (showtime > 15) {
+  if (showtime > 15 && showtime < 24) {
     isAM = "pm";
   }
+  if (showtime == 24) {
+    const sumDate = date.setDate(date.getDate() + 1);
+    const newDate = new Date(sumDate);
+    fdate = `${formatNumber(newDate.getFullYear())}-${formatNumber(
+      newDate.getMonth() + 1
+    )}-${formatNumber(newDate.getDate())}`;
+    rdate = `${formatNumber(newDate.getDate())}-${formatNumber(
+      newDate.getMonth() + 1
+    )}-${formatNumber(newDate.getFullYear())}`;
+    showtime = 0;
+  }
+
   let result = {
-    date: `${tahun}-${bulan}-${hari}`,
+    date: fdate,
+    r_date: rdate,
     show: `${formatNumber(showtime)}:00`,
     is_am: isAM,
   };
+  console.log(result);
   return result;
 }
-
-function renderForecast(fdata) {
+function renderForecast(fdata = FORECAST_DATA) {
   const forecastCard = document.getElementById("forecast-slider");
   forecastCard.innerHTML = "";
+  console.log(fdata);
   fdata.forEach((item) => {
     item.cuaca.forEach((dcuaca) => {
       let datetime = dcuaca.$.date;
@@ -41,7 +57,7 @@ function renderForecast(fdata) {
         const html = `
         <div class="swiper-slide card-forecast">
             <div class="f-loc"><b>${item.kecamatan}</b></div>
-            <div class="f-time">${now.show} WIB</div>
+            <div class="f-time"> ${now.r_date} ${now.show} WIB</div>
             <div class="f-wicon"><img
             src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-${now.is_am}.png" alt="${dcuaca.$.w_ket}"/></div>
             <div class="w-txt">${dcuaca.$.w_ket}</div>
@@ -50,6 +66,7 @@ function renderForecast(fdata) {
         </div>
         `;
         forecastCard.innerHTML += html;
+        forecastCard.setAttribute("style", "height: 350px;");
       }
     });
   });
@@ -62,7 +79,8 @@ function getForecast() {
   })
     .then((response) => response.json())
     .then((jsonResp) => {
-      renderForecast(jsonResp);
+      FORECAST_DATA = jsonResp;
+      renderForecast();
     })
     .catch((err) => {
       console.log(`Failed load forecast data: ${err}`);

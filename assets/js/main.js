@@ -284,29 +284,37 @@
     },
   });
   new Swiper(".swiper", {
-    speed: 1500,
+    speed: 500,
     loop: true,
     slidesPerView: 1,
     spaceBetween: 5,
+    slidesPerGroup: 1,
+    loop: true,
     breakpoints: {
       // when window width is >= 480px
       200: {
-        slidesPerView: 2,
-        spaceBetween: 5,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        loop: true,
       },
       900: {
         slidesPerView: 3,
         spaceBetween: 5,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        type: "bullets",
-        clickable: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
       },
     },
     autoplay: {
       delay: 8000,
       disableOnInteraction: false,
+    },
+    // Navigation arrows
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 })();

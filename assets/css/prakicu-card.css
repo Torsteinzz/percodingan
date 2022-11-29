@@ -1,10 +1,17 @@
 .card-forecast {
   background-color: teal;
   background-image: url(../img/w-forecast-bg.jpg);
-  padding: 10px;
-  border-radius: 10px;
+  background-attachment: fixed;
+  background-position: center;
   width: fit-content;
   min-width: 200px;
   color: #ffffff;
   text-align: center;
+  line-height: 2.5rem;
+  transition: 0.5s;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ed7b01;
 }
