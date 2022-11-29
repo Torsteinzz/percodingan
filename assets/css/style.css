@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-  color: #61BCD9;
+  color: #61bcd9;
   text-decoration: none;
 }
 
@@ -107,8 +107,6 @@ h6 {
   color: #5cb874;
 }
 
-
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -189,13 +187,13 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
-  color: #61BCD9;
+.navbar li:hover > a {
+  color: #61bcd9;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  color: #61BCD9;
+  color: #61bcd9;
   padding: 8px 25px;
   margin-left: 30px;
   border-radius: 4px;
@@ -206,7 +204,7 @@ h6 {
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-  background: #61BCD9;
+  background: #61bcd9;
   color: #fff;
 }
 
@@ -240,11 +238,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-  color: #61BCD9;
+.navbar .dropdown ul li:hover > a {
+  color: #61bcd9;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -256,7 +254,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -268,7 +266,7 @@ h6 {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -339,8 +337,8 @@ h6 {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
-  color: #61BCD9;
+.navbar-mobile li:hover > a {
+  color: #61bcd9;
 }
 
 .navbar-mobile .getstarted,
@@ -374,11 +372,11 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: #61BCD9;
+.navbar-mobile .dropdown ul li:hover > a {
+  color: #61bcd9;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -543,7 +541,6 @@ h6 {
 }
 
 @media (min-width: 1024px) {
-
   #hero .carousel-control-prev,
   #hero .carousel-control-next {
     width: 5%;
@@ -621,7 +618,12 @@ section {
 }
 
 .featured-services .icon-box-bg {
-  background-image: linear-gradient(0deg, #222222 0%, #2f2f2f 50%, #222222 100%);
+  background-image: linear-gradient(
+    0deg,
+    #222222 0%,
+    #2f2f2f 50%,
+    #222222 100%
+  );
 }
 
 .featured-services .icon {
@@ -718,7 +720,7 @@ gempabumi-detail .kedalaman {
 }
 
 .gempabumi-detail .lokasi {
-  background-image: url(../img/gempabumi/pusat.jpg;
+  background-image: url(../img/gempabumi/pusat.jpg);
   font-size: 14px;
   padding-top: 0;
   background-size: 18px 18px;
@@ -1125,8 +1127,6 @@ html[lang="en"] .gempabumi-detail .koordinat:before {
   display: block;
 }
 
-
-
 /*--------------------------------------------------------------
 ALERT
 --------------------------------------------------------------*/
@@ -1138,13 +1138,14 @@ ALERT
 }
 @media (max-width: 576px) {
   .alert {
-    margin-top: 0; height: 100%;
+    margin-top: 0;
+    height: 100%;
   }
 }
 @media (max-width: 991px) {
   .alert {
-    padding: 17px 0;   margin-bottom: 0; 
-  
+    padding: 17px 0;
+    margin-bottom: 0;
   }
 }
 .alert h3 {
@@ -1175,13 +1176,12 @@ ALERT
   border: 2px solid #ff7f5d;
 }
 
-
-.card-carousel-cuaca p{
-  color:white
+.card-carousel-cuaca p {
+  color: white;
 }
 
-.card-carousel-cuaca h2{
-  color:white
+.card-carousel-cuaca h2 {
+  color: white;
 }
 /*-----perdin-----/
 /*--------------------------------------------------------------
@@ -1651,7 +1651,10 @@ ALERT
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1659,7 +1662,10 @@ ALERT
   border: 1px solid #5cb874;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #5cb874;
 }
 
@@ -1682,7 +1688,7 @@ ALERT
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1848,7 +1854,7 @@ ALERT
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1902,7 +1908,7 @@ ALERT
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #5cb874;
   border: 0;
   padding: 10px 24px;
@@ -1911,7 +1917,7 @@ ALERT
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #6ec083;
 }
 
@@ -1964,11 +1970,11 @@ ALERT
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #3c3c3c;

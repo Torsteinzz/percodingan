@@ -1,404 +1,402 @@
 /*---gempa bumi--*/
 .gempabumi-home-bg {
-    min-height: 313px;
+  min-height: 313px;
+}
+
+.prakicu-kota-besar-bg,
+.gempabumi-home-bg,
+.kualitas-udara-home-bg,
+.img-mkg-home-bg {
+  background: #fff;
+  padding: 10px px;
+  box-shadow: #ddd -1px 2px 1px;
+}
+
+.gempabumi-detail {
+  font-size: 14px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.gempabumi-detail.no-bot,
+.gempabumi-detail.no-bot li:last-child {
+  margin-bottom: 0;
+}
+
+.gempabumi-detail {
+  font-size: 14px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.gempabumi-detail .waktu {
+  display: block;
+}
+
+*,
+.form-control {
+  border-radius: 0;
+}
+
+.gempabumi-detail .magnitude {
+  background-image: url(../img/gempabumi/magnitude.jpg);
+}
+
+.gempabumi-detail .ic {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 35px;
+  padding-top: 15px;
+  font-size: 18px;
+  background-position: center left;
+  position: relative;
+}
+
+gempabumi-detail .kedalaman {
+  background-image: url(../img/gempabumi/depth.jpg);
+}
+
+.gempabumi-detail .koordinat {
+  background-image: url(../img/gempabumi/location.jpg);
+}
+
+.gempabumi-detail .lokasi {
+  background-image: url(../img/gempabumi/pusat.jpg);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .dirasakan {
+  background-image: url(../img/gempabumi/rasa.jpg);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+a.more {
+  display: inline-block;
+  padding: 5px 14px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.gempabumi-detail.no-bot .ic {
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .lokasi {
+  background-image: url(../img/gempabumi/lo.png);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .ic {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 35px;
+  padding-top: 15px;
+  font-size: 18px;
+  background-position: center left;
+  position: relative;
+}
+
+.gempabumi-detail.no-bot .ic {
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .dirasakan {
+  background-image: url(../img/gempabumi/wilayah-dirasakan.png);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .ic {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 35px;
+  padding-top: 15px;
+  font-size: 18px;
+  background-position: center left;
+  position: relative;
+}
+
+@media (min-width: 991px) {
+  .gempabumi-detail li:nth-child(5),
+  .gempabumi-detail li:nth-child(6),
+  .gempabumi-detail li:nth-child(7) {
+    display: none;
   }
-  
-  .prakicu-kota-besar-bg,
-  .gempabumi-home-bg,
-  .kualitas-udara-home-bg,
-  .img-mkg-home-bg {
-    background: #fff;
-    padding: 10px px;
-    box-shadow: #ddd -1px 2px 1px;
+}
+
+@media (max-width: 991px) {
+  .gempabumi-detail.no-bot {
+    display: none;
   }
-  
-  .gempabumi-detail {
-    font-size: 14px;
-    font-family: "Roboto Slab", sans-serif;
+}
+
+/* GEMPA */
+
+.gempabumi-home .tab-v1 .tab-content img {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.gempabumi-home-bg {
+  min-height: 313px;
+}
+
+.gempabumi-side-bg {
+}
+
+.gempabumi-detail {
+  font-size: 14px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.gempabumi-detail li {
+  margin-bottom: 15px;
+}
+
+.gempabumi-detail .waktu {
+  display: block;
+}
+
+.gempabumi-detail .ic {
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  padding-left: 35px;
+  padding-top: 15px;
+  font-size: 18px;
+  background-position: center left;
+  position: relative;
+}
+
+.gempabumi-detail .magnitude {
+  background-image: url(../img/gempabumi/magnitude.jpg);
+}
+
+.gempabumi-detail .magnitude:before {
+  content: "Magnitudo";
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+
+html[lang="en"] .gempabumi-detail .magnitude:before {
+  content: "Magnitude";
+}
+
+.gempabumi-detail .kedalaman {
+  background-image: url(../img/gempabumi/depth.jpg);
+}
+
+.gempabumi-detail .kedalaman:before {
+  content: "Kedalaman";
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+
+html[lang="en"] .gempabumi-detail .kedalaman:before {
+  content: "Depth";
+}
+
+.gempabumi-detail .koordinat {
+  background-image: url(../img/gempabumi/lokasi.jpg);
+}
+
+.gempabumi-detail .koordinat:before {
+  content: "Lokasi";
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+}
+
+html[lang="en"] .gempabumi-detail .koordinat:before {
+  content: "Location";
+}
+
+.gempabumi-detail .lokasi {
+  background-image: url(../img/gempabumi/pusat.png);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .tsunami {
+  background-image: url(../img/gempabumi/tsunami.png);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail .dirasakan {
+  background-image: url(../img/gempabumi/rasa.jpg);
+  font-size: 14px;
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempabumi-detail.no-bot li {
+  margin-bottom: 5px;
+}
+
+.gempabumi-detail.no-bot li:last-child {
+  margin-top: 15px;
+}
+
+.gempabumi-detail.no-bot,
+.gempabumi-detail.no-bot li:last-child {
+  margin-bottom: 0;
+}
+
+.gempabumi-detail.no-bot .ic {
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.gempa-img {
+  background-position: center 27%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height: 600px;
+  max-width: 600px;
+}
+
+@media (min-width: 991px) {
+  .gempabumi-detail li:nth-child(5),
+  .gempabumi-detail li:nth-child(6),
+  .gempabumi-detail li:nth-child(7) {
+    display: none;
   }
-  
-  .gempabumi-detail.no-bot,
-  .gempabumi-detail.no-bot li:last-child {
-    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .gempabumi-detail.no-bot {
+    display: none;
   }
-  
-  .gempabumi-detail {
-    font-size: 14px;
-    font-family: "Roboto Slab", sans-serif;
+}
+
+.FlexEmbed {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.FlexEmbed:before {
+  content: "";
+  display: block;
+  width: 100%;
+}
+
+.FlexEmbed--2by1:before {
+  padding-bottom: 80%;
+}
+
+/* Warning Gempabumi */
+.warning-logo {
+  margin: 20px auto;
+  display: block;
+}
+
+.ps-logo {
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+}
+
+.ps-logo img {
+  margin: 0 5px;
+}
+
+.warning-gempa h3 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.warning-gempa .gempabumi-home-bg {
+  padding: 15px;
+  min-height: inherit;
+}
+
+.warning-gempa ul {
+  margin-bottom: 0;
+}
+
+.warning-gempa .gempabumi-detail {
+  padding-left: 0;
+}
+
+.warning-gempa .gempabumi-detail .nobot .ic {
+  padding-top: 0;
+  background-size: 18px 18px;
+}
+
+.warning-gempa .gempabumi-detail ul li:nth-child(4) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 478px) {
+  .warning-gempa .nobot {
+    display: none;
   }
-  
-  .list-unstyled {
-    padding-left: 0;
-    list-style: none;
-  }
-  
-  .gempabumi-detail .waktu {
-    display: block;
-  }
-  
-  *,
-  .form-control {
-    border-radius: 0;
-  }
-  
-  .gempabumi-detail .magnitude {
-    background-image: url(../img/gempabumi/magnitude.jpg);
-  }
-  
-  .gempabumi-detail .ic {
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding-left: 35px;
-    padding-top: 15px;
-    font-size: 18px;
-    background-position: center left;
-    position: relative;
-  }
-  
-  gempabumi-detail .kedalaman {
-    background-image: url(../img/gempabumi/depth.jpg);
-  }
-  
-  .gempabumi-detail .koordinat {
-    background-image: url(../img/gempabumi/location.jpg);
-  }
-  
-  .gempabumi-detail .lokasi {
-    background-image: url(../img/gempabumi/pusat.jpg;
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .dirasakan {
-    background-image: url(../img/gempabumi/rasa.jpg);
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  a.more {
-    display: inline-block;
-    padding: 5px 14px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    font-size: 13px;
-    text-decoration: none;
-    margin-bottom: 10px;
-  }
-  
-  .gempabumi-detail.no-bot .ic {
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .lokasi {
-    background-image: url(../img/gempabumi/lo.png);
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .ic {
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding-left: 35px;
-    padding-top: 15px;
-    font-size: 18px;
-    background-position: center left;
-    position: relative;
-  }
-  
-  .gempabumi-detail.no-bot .ic {
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .dirasakan {
-    background-image: url(../img/gempabumi/wilayah-dirasakan.png);
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .ic {
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding-left: 35px;
-    padding-top: 15px;
-    font-size: 18px;
-    background-position: center left;
-    position: relative;
-  }
-  
-  @media (min-width: 991px) {
-    .gempabumi-detail li:nth-child(5),
-    .gempabumi-detail li:nth-child(6),
-    .gempabumi-detail li:nth-child(7) {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 991px) {
-    .gempabumi-detail.no-bot {
-      display: none;
-    }
-  }
-  
-  /* GEMPA */
-  
-  .gempabumi-home .tab-v1 .tab-content img {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .gempabumi-home-bg {
-    min-height: 313px;
-  }
-  
-  .gempabumi-side-bg {
-  }
-  
-  .gempabumi-detail {
-    font-size: 14px;
-    font-family: "Roboto Slab", sans-serif;
-  }
-  
-  .gempabumi-detail li {
-    margin-bottom: 15px;
-  }
-  
-  .gempabumi-detail .waktu {
-    display: block;
-  }
-  
-  .gempabumi-detail .ic {
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    padding-left: 35px;
-    padding-top: 15px;
-    font-size: 18px;
-    background-position: center left;
-    position: relative;
-  }
-  
-  .gempabumi-detail .magnitude {
-    background-image: url(../img/gempabumi/magnitude.jpg);
-  }
-  
-  .gempabumi-detail .magnitude:before {
-    content: "Magnitudo";
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  html[lang="en"] .gempabumi-detail .magnitude:before {
-    content: "Magnitude";
-  }
-  
-  .gempabumi-detail .kedalaman {
-    background-image: url(../img/gempabumi/depth.jpg);
-  }
-  
-  .gempabumi-detail .kedalaman:before {
-    content: "Kedalaman";
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  html[lang="en"] .gempabumi-detail .kedalaman:before {
-    content: "Depth";
-  }
-  
-  .gempabumi-detail .koordinat {
-    background-image: url(../img/gempabumi/lokasi.jpg);
-  }
-  
-  .gempabumi-detail .koordinat:before {
-    content: "Lokasi";
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  html[lang="en"] .gempabumi-detail .koordinat:before {
-    content: "Location";
-  }
-  
-  .gempabumi-detail .lokasi {
-    background-image: url(../img/gempabumi/pusat.png);
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .tsunami {
-    background-image: url(../img/gempabumi/tsunami.png);
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail .dirasakan {
-    background-image: url(../img/gempabumi/rasa.jpg);
-    font-size: 14px;
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempabumi-detail.no-bot li {
-    margin-bottom: 5px;
-  }
-  
-  .gempabumi-detail.no-bot li:last-child {
-    margin-top: 15px;
-  }
-  
-  .gempabumi-detail.no-bot,
-  .gempabumi-detail.no-bot li:last-child {
-    margin-bottom: 0;
-  }
-  
-  .gempabumi-detail.no-bot .ic {
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .gempa-img {
-    background-position: center 27%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-height: 600px;
-    max-width: 600px;
-  }
-  
-  @media (min-width: 991px) {
-    .gempabumi-detail li:nth-child(5),
-    .gempabumi-detail li:nth-child(6),
-    .gempabumi-detail li:nth-child(7) {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 991px) {
-    .gempabumi-detail.no-bot {
-      display: none;
-    }
-  }
-  
-  .FlexEmbed {
-    display: block;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .FlexEmbed:before {
-    content: "";
-    display: block;
-    width: 100%;
-  }
-  
-  .FlexEmbed--2by1:before {
-    padding-bottom: 80%;
-  }
-  
-  /* Warning Gempabumi */
-  .warning-logo {
-    margin: 20px auto;
-    display: block;
-  }
-  
-  .ps-logo {
-    margin: 20px auto;
-    display: block;
-    text-align: center;
-  }
-  
-  .ps-logo img {
-    margin: 0 5px;
-  }
-  
-  .warning-gempa h3 {
-    text-align: center;
-    margin-top: 0;
+
+  .warning-gempa .img-responsive {
     margin-bottom: 20px;
   }
-  
-  .warning-gempa .gempabumi-home-bg {
-    padding: 15px;
-    min-height: inherit;
+}
+
+@media (min-width: 479px) {
+  .warning-gempa .nobot1 {
+    display: none;
   }
-  
-  .warning-gempa ul {
+}
+
+@media (max-width: 991px) {
+  .warning-gempa .nobot2 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .warning-gempa .nobot2 {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .gempabumi-home .nav-tabs span {
+    display: none;
+  }
+
+  .warning-gempa .gempabumi-detail ul li:nth-child(6) {
     margin-bottom: 0;
   }
-  
-  .warning-gempa .gempabumi-detail {
-    padding-left: 0;
-  }
-  
-  .warning-gempa .gempabumi-detail .nobot .ic {
-    padding-top: 0;
-    background-size: 18px 18px;
-  }
-  
-  .warning-gempa .gempabumi-detail ul li:nth-child(4) {
-    margin-bottom: 10px;
-  }
-  
-  @media (max-width: 478px) {
-    .warning-gempa .nobot {
-      display: none;
-    }
-  
-    .warning-gempa .img-responsive {
-      margin-bottom: 20px;
-    }
-  }
-  
-  @media (min-width: 479px) {
-    .warning-gempa .nobot1 {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 991px) {
-    .warning-gempa .nobot2 {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .warning-gempa .nobot2 {
-      display: none;
-    }
-  }
-  
-  @media (min-width: 992px) and (max-width: 1199px) {
-    .gempabumi-home .nav-tabs span {
-      display: none;
-    }
-  
-    .warning-gempa .gempabumi-detail ul li:nth-child(6) {
-      margin-bottom: 0;
-    }
-  
-    .warning-gempa .nobot3 {
-      display: none;
-    }
-  }
-  
-  .card-gempa {
-    padding: 5px;
-    height: 350px;
-    box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
-    -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
-  }
 
-  /*---gempa bumi--*/
+  .warning-gempa .nobot3 {
+    display: none;
+  }
+}
 
-  
+.card-gempa {
+  padding: 5px;
+  height: 350px;
+  box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 1px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}
+
+/*---gempa bumi--*/
