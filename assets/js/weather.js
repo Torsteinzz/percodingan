@@ -11,23 +11,26 @@ function getForecastClock(resDate) {
   //GET SHOW forecast clock
   const hourRow = [0, 3, 6, 9, 12, 15, 18, 21];
   let showtime;
+  let isAM = "am";
   hourRow.forEach((item) => {
     let interval = item - date.getHours();
     if (date.getHours() <= item && interval < 3) {
       showtime = item;
     }
   });
-
+  if (showtime > 15) {
+    isAM = "pm";
+  }
   let result = {
     date: `${tahun}-${bulan}-${hari}`,
     show: `${formatNumber(showtime)}:00`,
+    is_am: isAM,
   };
   return result;
 }
 
 function renderForecast(fdata) {
   const forecastCard = document.getElementById("forecast-slider");
-  let html;
   forecastCard.innerHTML = "";
   fdata.forEach((item) => {
     item.cuaca.forEach((dcuaca) => {
@@ -40,7 +43,7 @@ function renderForecast(fdata) {
             <div class="f-loc"><b>${item.kecamatan}</b></div>
             <div class="f-time">${now.show} WIB</div>
             <div class="f-wicon"><img
-            src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-am.png" alt="${dcuaca.$.w_ket}"/></div>
+            src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-${now.is_am}.png" alt="${dcuaca.$.w_ket}"/></div>
             <div class="w-txt">${dcuaca.$.w_ket}</div>
             <div class="f-temp">${dcuaca.$.t}°C</div>
             <div class="f-link"><a href="#">Selengkapnya</a></div>

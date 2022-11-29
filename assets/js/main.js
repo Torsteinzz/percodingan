@@ -283,17 +283,30 @@
       clickable: true,
     },
   });
-  new Swiper(".swiper-weather", {
-    speed: 500,
+  new Swiper(".swiper", {
+    speed: 1500,
     loop: true,
-    autoplay: {
-      delay: 10000,
-      disableOnInteraction: false,
+    slidesPerView: 1,
+    spaceBetween: 5,
+    breakpoints: {
+      // when window width is >= 480px
+      200: {
+        slidesPerView: 2,
+        spaceBetween: 5,
+      },
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
     },
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      clickable: true,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
     },
   });
 })();

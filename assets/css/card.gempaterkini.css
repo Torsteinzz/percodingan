@@ -42,7 +42,7 @@
 }
 
 .gempabumi-detail .magnitude {
-  background-image: url(../img/gempabumi/magnitude.jpg);
+  background-image: url(/img/gempabumi/magnitude.jpg);
 }
 
 .gempabumi-detail .ic {
@@ -56,7 +56,7 @@
 }
 
 gempabumi-detail .kedalaman {
-  background-image: url(../img/gempabumi/depth.jpg);
+  background-image: url(../../img/gempabumi/depth.jpg);
 }
 
 .gempabumi-detail .koordinat {
@@ -64,14 +64,14 @@ gempabumi-detail .kedalaman {
 }
 
 .gempabumi-detail .lokasi {
-  background-image: url(../img/gempabumi/pusat.jpg);
+  background-image: url(../img/gempabumi/location.jpg);
   font-size: 14px;
   padding-top: 0;
   background-size: 18px 18px;
 }
 
 .gempabumi-detail .dirasakan {
-  background-image: url(../img/gempabumi/rasa.jpg);
+  background-image: url(../../img/gempabumi/rasa.jpg);
   font-size: 14px;
   padding-top: 0;
   background-size: 18px 18px;
@@ -94,7 +94,7 @@ a.more {
 }
 
 .gempabumi-detail .lokasi {
-  background-image: url(../img/gempabumi/lo.png);
+  background-image: url(../img/gempabumi/location.png);
   font-size: 14px;
   padding-top: 0;
   background-size: 18px 18px;
@@ -214,7 +214,7 @@ html[lang="en"] .gempabumi-detail .kedalaman:before {
 }
 
 .gempabumi-detail .koordinat {
-  background-image: url(../img/gempabumi/lokasi.jpg);
+  background-image: url(../img/gempabumi/location.jpg);
 }
 
 .gempabumi-detail .koordinat:before {
