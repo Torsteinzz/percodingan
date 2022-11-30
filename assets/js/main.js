@@ -285,10 +285,7 @@
   });
   new Swiper(".swiper", {
     speed: 500,
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 5,
-    slidesPerGroup: 3,
+    slidesPerGroup: 1,
     breakpoints: {
       // when window width is >= 480px
       200: {
@@ -304,6 +301,7 @@
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
+          dynamicBullets: true,
         },
       },
     },
@@ -324,6 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateGempa();
   renderClock({
     dateId: "date-txt",
+    mdate: "date-txt-m",
     clockId: "clock-txt",
   });
 });

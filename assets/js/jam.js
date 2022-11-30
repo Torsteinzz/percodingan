@@ -71,10 +71,14 @@ function renderClock(obj) {
     let UTCminutes = formatNumber(serverdate.getUTCMinutes());
     let UTCseconds = formatNumber(serverdate.getUTCSeconds());
 
+    const mdate = `${dayDate}/${serverdate.getMonth()}/${year}`;
     const date = `${day}, ${dayDate} ${month} ${year}`;
     const clock = `${hours}:${minutes}:${seconds} WIB / ${UTChours}:${UTCminutes}:${UTCseconds} UTC `;
     document.querySelectorAll(`.${obj.dateId}`).forEach((item) => {
       item.innerHTML = `<i class="bi bi-date-fill date-icon"></i> ${date}`;
+    });
+    document.querySelectorAll(`.${obj.mdate}`).forEach((item) => {
+      item.innerHTML = `<i class="bi bi-date-fill date-icon"></i> ${mdate}`;
     });
     document.querySelectorAll(`.${obj.clockId}`).forEach((item) => {
       item.innerHTML = `<i class="bi bi-closk-fill clock-icon"></i> ${clock}`;

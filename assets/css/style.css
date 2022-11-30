@@ -68,6 +68,26 @@ h6 {
 /*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
+
+@media (max-width: 700px) {
+  .date-txt {
+    display: none !important;
+  }
+  .date-txt-m {
+    display: block;
+    font-size: 12px;
+  }
+  .clock-txt {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 800px) {
+  .date-txt-m {
+    display: none !important;
+  }
+}
+
 #topbar {
   background: #fbfbfb;
   font-size: 15px;
@@ -614,6 +634,14 @@ section {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
+.item-layanan > .icon-box {
+  min-width: 350px;
+}
+@media (max-width: 800px) {
+  .item-layanan > .icon-box {
+    width: 100%;
+  }
+}
 .featured-services {
   padding: 20px 0;
 }
