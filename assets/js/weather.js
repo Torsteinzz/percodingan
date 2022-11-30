@@ -1,8 +1,25 @@
+const STORAGE_KEY = "FORECAST-DATA";
 const FORECAST_URL =
   "https://api-cuaca-karimun.netlify.app/.netlify/functions/api/cuaca?kab=Kab.%20Cilacap";
 let cur_loc = new URL(window.location.href).pathname;
 
 let FORECAST_DATA = [];
+
+function isStorageExist() {
+  if (typeof Storage === undefined) {
+    alert("Browser ini tidak mendukung Local Storage");
+    return false;
+  }
+  return true;
+}
+
+function saveData() {
+  if (isStorageExist()) {
+    let dataParsed = JSON.stringify(FORECAST_DATA);
+    localStorage.setItem(STORAGE_KEY, dataParsed);
+  }
+}
+
 function getForecastClock() {
   const date = new Date();
   let bulan = formatNumber(date.getMonth() + 1);
@@ -103,9 +120,6 @@ function renderForecast(fdata = FORECAST_DATA) {
     });
   });
   forecastCard.setAttribute("style", "min-height: 400px;");
-  document
-    .querySelectorAll(".card-forecast")
-    .setAttribute("style", "min-height: 400px;");
 }
 
 function getForecast() {
@@ -116,15 +130,32 @@ function getForecast() {
     .then((response) => response.json())
     .then((jsonResp) => {
       FORECAST_DATA = jsonResp;
-      if (cur_loc == "/prakicu-detail.html") {
-        getDetail();
-      } else {
-        renderForecast();
-      }
+      renderForecast();
+      saveData();
     })
     .catch((err) => {
       console.log(`Failed load forecast data: ${err}`);
     });
 }
 
-getForecast();
+function loadData() {
+  const stringData = localStorage.getItem(STORAGE_KEY);
+  let data = JSON.parse(stringData);
+  //Data dari local storage disimpan pada array
+  if (data != null) {
+    FORECAST_DATA = data;
+    if (cur_loc == "/prakicu-detail.html") {
+      getDetail();
+    } else {
+      renderForecast();
+    }
+  } else {
+    getForecast();
+  }
+}
+
+if (isStorageExist()) {
+  loadData();
+} else {
+  getForecast();
+}
