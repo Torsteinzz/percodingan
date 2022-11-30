@@ -290,11 +290,12 @@
       200: {
         slidesPerView: 1,
         slidesPerGroup: 1,
+        spaceBetween: 1,
         loop: true,
       },
       900: {
         slidesPerView: 3,
-        spaceBetween: 5,
+        spaceBetween: 3,
         loop: true,
         pagination: {
           el: ".swiper-pagination",

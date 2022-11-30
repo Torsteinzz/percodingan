@@ -53,7 +53,7 @@ function renderForecast(fdata = FORECAST_DATA) {
       let now = getForecastClock(arr_datetime);
       if (datetime == `${now.date} ${now.show}`) {
         const html = `
-        <div class="swiper-slide card-forecast">
+        <div class="swiper-slide card-forecast" style="min-height: 400px;">
             <div class="f-loc"><b>${item.kecamatan}</b></div>
             <div class="f-time"> ${now.r_date} ${now.show} WIB</div>
             <div class="f-wicon"><img
@@ -64,10 +64,13 @@ function renderForecast(fdata = FORECAST_DATA) {
         </div>
         `;
         forecastCard.innerHTML += html;
-        forecastCard.setAttribute("style", "min-height: 350px;");
       }
     });
   });
+  forecastCard.setAttribute("style", "min-height: 400px;");
+  document
+    .querySelectorAll(".card-forecast")
+    .setAttribute("style", "min-height: 400px;");
 }
 
 function getForecast() {

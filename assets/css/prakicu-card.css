@@ -3,11 +3,16 @@
   background-image: url(../img/w-forecast-bg.jpg);
   background-position: center;
   width: fit-content;
+  padding: 15px 0px;
   min-width: 200px;
   color: #ffffff;
   text-align: center;
   line-height: 2.5rem;
   transition: 0.5s;
+}
+
+.card-forecast > .f-loc {
+  font-size: 1.2rem;
 }
 
 .swiper-button-prev,
