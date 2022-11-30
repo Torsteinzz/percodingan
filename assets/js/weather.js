@@ -16,7 +16,7 @@ function isStorageExist() {
 function saveData() {
   if (isStorageExist()) {
     let dataParsed = JSON.stringify(FORECAST_DATA);
-    localStorage.setItem(STORAGE_KEY, dataParsed);
+    sessionStorage.setItem(STORAGE_KEY, dataParsed);
   }
 }
 
@@ -106,13 +106,13 @@ function renderForecast(fdata = FORECAST_DATA) {
       if (datetime == `${now.date} ${now.show}`) {
         const html = `
         <div class="swiper-slide card-forecast" style="min-height: 400px;">
+          <a href="prakicu-detail.html?detail=${item.kecamatan}">
             <div class="f-loc"><b>${item.kecamatan}</b></div>
             <div class="f-time"> ${now.r_date} ${now.show} WIB</div>
-            <div class="f-wicon"><img
-            src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-${now.is_am}.png" alt="${dcuaca.$.w_ket}"/></div>
+            <div class="f-wicon"><img src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-${now.is_am}.png" alt="${dcuaca.$.w_ket}"/></div>
             <div class="w-txt">${dcuaca.$.w_ket}</div>
             <div class="f-temp">${dcuaca.$.t}°C</div>
-            <div class="f-link"><a href="prakicu-detail.html?detail=${item.kecamatan}">Selengkapnya</a></div>
+          </a>
         </div>
         `;
         forecastCard.innerHTML += html;
@@ -139,7 +139,7 @@ function getForecast() {
 }
 
 function loadData() {
-  const stringData = localStorage.getItem(STORAGE_KEY);
+  const stringData = sessionStorage.getItem(STORAGE_KEY);
   let data = JSON.parse(stringData);
   //Data dari local storage disimpan pada array
   if (data != null) {

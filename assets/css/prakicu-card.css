@@ -7,12 +7,24 @@
   min-width: 200px;
   color: #ffffff;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 3rem;
   transition: 0.5s;
 }
 
-.card-forecast > .f-loc {
+.card-forecast > a {
+  color: #ffffff;
+}
+
+.card-forecast > a:hover {
+  color: #ffffff;
+}
+
+.card-forecast .f-loc {
   font-size: 1.2rem;
+}
+
+.card-forecast .f-temp {
+  font-size: 2.5rem;
 }
 
 .swiper-button-prev,
