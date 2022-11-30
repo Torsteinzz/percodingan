@@ -30,13 +30,13 @@ function renderQuakeCard(quakeData) {
   const CardLayout = document.querySelector(".card-gempa");
   const html = `
     <div class="row">
-                  <div class="col-md-6 col-sm-12 text-center">
+                  <div class="col-md-6 col-sm-12 text-center mb-2">
                     <a href="https://ews.bmkg.go.id/tews/data/${
                       data.Shakemap
                     }" class="fancybox img-hover-v1" rel="gallery1" title="Gempabumi Terkini">
                     <img class="img img-responsive img-fluid" src="https://ews.bmkg.go.id/tews/data/${
                       data.Shakemap
-                    }" alt="gempa terkini" width="200" height="190">
+                    }" alt="gempa terkini" width="200">
                     </a>
                   </div>
                       <div class="col-md-6 col-sm-12 gempabumi-detail no-padding">
@@ -57,7 +57,7 @@ function renderQuakeCard(quakeData) {
                       </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12 gempabumi-detail no-padding mt-3">
+                  <div class="col-md-12 gempabumi-detail no-padding mt-2">
                   <ul class="list-unstyled">
                   <li><span class="ic lokasi"></span>${
                     data.Wilayah
