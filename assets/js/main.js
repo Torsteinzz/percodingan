@@ -287,11 +287,9 @@
     speed: 500,
     slidesPerGroup: 1,
     breakpoints: {
-      // when window width is >= 480px
       200: {
         slidesPerView: 1,
         slidesPerGroup: 1,
-        spaceBetween: 5,
         loop: true,
       },
       900: {
@@ -319,10 +317,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   calibrate();
-  updateGempa();
   renderClock({
     dateId: "date-txt",
     mdate: "date-txt-m",
     clockId: "clock-txt",
   });
+  updateGempa();
 });

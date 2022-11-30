@@ -8,7 +8,7 @@ function getForecastClock() {
   let tahun = formatNumber(date.getFullYear());
   let hari = formatNumber(date.getDate());
   let fdate = `${tahun}-${bulan}-${hari}`;
-  let rdate = `${hari}-${bulan}-${tahun}`;
+  let rdate = " ";
 
   //GET SHOW forecast clock
   const hourRow = [0, 3, 6, 9, 12, 15, 18, 21, 24];
@@ -41,13 +41,11 @@ function getForecastClock() {
     show: `${formatNumber(showtime)}:00`,
     is_am: isAM,
   };
-  console.log(result);
   return result;
 }
 function renderForecast(fdata = FORECAST_DATA) {
   const forecastCard = document.getElementById("forecast-slider");
   forecastCard.innerHTML = "";
-  console.log(fdata);
   fdata.forEach((item) => {
     item.cuaca.forEach((dcuaca) => {
       let datetime = dcuaca.$.date;
@@ -66,7 +64,7 @@ function renderForecast(fdata = FORECAST_DATA) {
         </div>
         `;
         forecastCard.innerHTML += html;
-        forecastCard.setAttribute("style", "height: 350px;");
+        forecastCard.setAttribute("style", "min-height: 350px;");
       }
     });
   });
