@@ -15,7 +15,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #5cb874;
+  color: #000000;
+}
+l {
+  text-decoration: none;
+  color: #2599DD;
 }
 
 a:hover {
