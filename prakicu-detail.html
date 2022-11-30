@@ -41,12 +41,9 @@
   <!-- ======= Top Bar/Wadah Jam ======= -->
   <section id="topbar" class="d-flex align-items-center text-white bg-dark">
     <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-date-fill date-icon"></i> Minggu, 12 September 2021 
-      </div>
-      <div class="social-links d-none d-md-block">
-        <i class="bi bi-closk-fill clock-icon"></i> 12:09:21 WIB / 05:09:21 UTC
-      </div>
+      <div class="contact-info d-flex align-items-center date-txt"> </div>
+      <div class="contact-info d-flex align-items-center date-txt-m mx-3"> </div>
+      <div class="social-links clock-txt"></div>
     </div>
   </section>
   <nav class="navbar bg-light">
@@ -59,7 +56,7 @@
   </div>
 </nav>
 
-  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center">
   <div class="container d-flex align-items-center">
 
@@ -107,107 +104,41 @@
         <div class="container" >
           <main class="container border">
             <div class="row">
-              <div class="col-md-8"> <!---bagian kiri------>
-                <article class="blog-post">
-                    <hr style="border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
-                    <div class="section-title">
-                        <h2>BMKG Terapkan ISO 27001:2013 Untuk Perkuat Jaringan Keamanan Siber</h2>
-                    </div> 
-                    <small class="opacity-50 text-nowrap">November 24, 2022 by Ibrahim</small>
-                    <hr style="border-width:0;color:rgb(255, 255, 255);background-color:rgb(255, 255, 255)">
-                        <img src="img/berita2.jpg" class="img-fluid" alt="berita2" style="border:0; width: 100%;"/>   
-                        <hr class="hr hr-blurry"/>
-                        <p>Malang - Senin (28/2) Saat ini keberadaan TIK telah mengubah perilaku pengguna informasi MKKuG dalam mencari dan memilih informasi yang mereka butuhkan. Maka dari itu seluruh data dan informasi milik BMKG harus dilindungi dari penyalahgunaan, modifikasi, pencurian, atau perusakan, baik oleh pihak internal maupun pihak eksternal.</p>
-                        
-                        <p>Banyaknya kejadian bencana alam menyadarkan masyarakat akan pentingnya informasi dari BMKG, baik itu lewat media massa ataupun langsung ke situs www.bmkg.go.id, media sosial BMKG ataupun aplikasi @infoBMKG.</p> 
-
-                
-                
-                    </article>
-
-
-              </div>
-              <!---bagian kanan-->
-              <div class="col-md-4">
-                <div class="p-4 mb-3 bg-light rounded">
-                  <h4>Gempa Bumi Tekini</h4>
-                  <hr>
-                    <div class="card-gempa">
-                      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                <div class="section-title">
+                    <h2>Detail Prakiraan Cuaca</h2>
+                    <h3 id="kec-txt"></h3>
+                </div>      
+                   <!-- ======= Contact Section ======= -->
+                <section id="tabel-cuaca">
+                    <div class="container table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="text-center">
+                              <tr class="table-dark">
+                                <th scope="col" rowspan="2">Waktu</th>
+                                <th scope="col" rowspan="2">Cuaca</th>
+                                <th scope="col" rowspan="2">Deskripsi</th>
+                                <th scope="col" rowspan="2">Suhu Udara</th>
+                                <th scope="col" rowspan="2">Kelembaban</th>
+                                <th scope="col" colspan="2">Angin</th>
+                              </tr>
+                              <tr class="table-dark">
+                                <th scope="col">Arah</th>
+                                <th scope="col">Kecepatan</th>
+                              </tr>
+                            </thead>
+                            <tbody class="text-center" id="fdetail">
+                              <tr>
+                                <td colspan="6"><i>Memuat data ...</i></td>
+                              </tr>
+                            </tbody>
+                          </table>
                     </div>
-                </div>
-
-                <div class="p-4 mb-3 bg-light rounded">
-                    <h4 >Berita</h4>
-                    <hr>
-                    <div class="list-group w-auto">
-                        <a href="https://www.bmkg.go.id/berita/?p=bmkg-terapkan-iso-270012013-untuk-perkuat-jaringan-kemanan-siber&lang=ID" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                          <img src="img/berita3.jpg" alt="twbs" width="110" height="70">
-                          <div class="d-flex gap-2 w-100 justify-content-between">
-                            <div>
-                              <h6 class="mb-0">BMKG : Harap Tenang, Intensitas Gempa Susulan di Cianjur Terus Melandai</h6>
-                              <small class="opacity-50 text-nowrap">23 Nov 2022</small>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="https://www.bmkg.go.id/berita/?p=bmkg-terapkan-iso-270012013-untuk-perkuat-jaringan-kemanan-siber&lang=ID" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <img src="img/berita3.jpg" alt="twbs" width="110" height="70">
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                              <div>
-                                <h6 class="mb-0">BMKG : Harap Tenang, Intensitas Gempa Susulan di Cianjur Terus Melandai</h6>
-                                <small class="opacity-50 text-nowrap">23 Nov 2022</small>
-                            </div>
-                            </div>
-                          </a>
-                          <a href="https://www.bmkg.go.id/berita/?p=bmkg-terapkan-iso-270012013-untuk-perkuat-jaringan-kemanan-siber&lang=ID" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <img src="img/berita3.jpg" alt="twbs" width="110" height="70">
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                              <div>
-                                <h6 class="mb-0">BMKG : Harap Tenang, Intensitas Gempa Susulan di Cianjur Terus Melandai</h6>
-                                <small class="opacity-50 text-nowrap">23 Nov 2022</small>
-                            </div>
-                            </div>
-                          </a>  
-                        </div>
-
-                         <!---Artikel samping-->
-                <div class="p-4 mb-3 bg-light rounded">
-                    <h4 >Artikel</h4>
-                    <hr>
-                    <div class="list-group w-auto">
-                        <a href="https://www.bmkg.go.id/berita/?p=bmkg-terapkan-iso-270012013-untuk-perkuat-jaringan-kemanan-siber&lang=ID" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                          <div class="d-flex gap-2 w-100 justify-content-between">
-                            <div>
-                              <h6 class="mb-0">BMKG : Harap Tenang, Intensitas Gempa Susulan di Cianjur Terus Melandai</h6>
-                              <small class="opacity-50 text-nowrap">23 Nov 2022</small>
-                            </div>
-                          </div>
-                        </a>
-                        <a href="https://www.bmkg.go.id/berita/?p=bmkg-terapkan-iso-270012013-untuk-perkuat-jaringan-kemanan-siber&lang=ID" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                              <div>
-                                <h6 class="mb-0">BMKG : Harap Tenang, Intensitas Gempa Susulan di Cianjur Terus Melandai</h6>
-                                <small class="opacity-50 text-nowrap">23 Nov 2022</small>
-                            </div>
-                            </div>
-                          </a>
-                          <a href="https://www.bmkg.go.id/berita/?p=bmkg-terapkan-iso-270012013-untuk-perkuat-jaringan-kemanan-siber&lang=ID" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
-                            <div class="d-flex gap-2 w-100 justify-content-between">
-                              <div>
-                                <h6 class="mb-0">BMKG : Harap Tenang, Intensitas Gempa Susulan di Cianjur Terus Melandai</h6>
-                                <small class="opacity-50 text-nowrap">23 Nov 2022</small>
-                            </div>
-                            </div>
-                          </a>  
-                      </div>
-                </div>
-                </div>
-              </div>    
-                       
+                </section><!-- End Contact Section -->   
+                                    
               
             </main>
           </div>
-        </section><!-- End Prakicu -->
+        </section>
   
 
 
@@ -317,8 +248,7 @@
 
   <!-- Get BMKG Data -->
   <script src="assets/js/jam.js"></script>
-  <script src="assets/js/earthquake.js"></script>
-
+  <script src="assets/js/weather.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

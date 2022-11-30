@@ -1,5 +1,6 @@
 const FORECAST_URL =
   "https://api-cuaca-karimun.netlify.app/.netlify/functions/api/cuaca?kab=Kab.%20Cilacap";
+let cur_loc = new URL(window.location.href).pathname;
 
 let FORECAST_DATA = [];
 function getForecastClock() {
@@ -43,6 +44,40 @@ function getForecastClock() {
   };
   return result;
 }
+
+function getDetail() {
+  const param = new URLSearchParams(window.location.search).get("detail");
+  const fdata = FORECAST_DATA;
+  const tabelData = document.getElementById("fdetail");
+  const txtKecamatan = document.getElementById("kec-txt");
+  txtKecamatan.innerText = param;
+  tabelData.innerHTML = "";
+  if (param) {
+    fdata.forEach((item) => {
+      if (item.kecamatan == param) {
+        item.cuaca.forEach((dcuaca) => {
+          let datetime = dcuaca.$.date;
+          let now = getForecastClock(datetime.split(" "));
+          if (datetime.split(" ")[0] == now.date) {
+            let html = `
+            <tr>
+              <th scope="row">${datetime}</th>
+              <td><img src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-${now.is_am}.png" alt="${dcuaca.$.w_ket}" width="30"/></td>
+              <td>${dcuaca.$.w_ket}</td>
+              <td>${dcuaca.$.t} °C</td>
+              <td>${dcuaca.$.hu}%</td>
+              <td>${dcuaca.$.wdcard}</td>
+              <td>${dcuaca.$.ws} km/jam</td>
+            </tr>
+            `;
+            tabelData.innerHTML += html;
+          }
+        });
+      }
+    });
+  }
+}
+
 function renderForecast(fdata = FORECAST_DATA) {
   const forecastCard = document.getElementById("forecast-slider");
   forecastCard.innerHTML = "";
@@ -60,7 +95,7 @@ function renderForecast(fdata = FORECAST_DATA) {
             src="https://www.bmkg.go.id/asset/img/weather_icon/ID/${dcuaca.$.w_ket}-${now.is_am}.png" alt="${dcuaca.$.w_ket}"/></div>
             <div class="w-txt">${dcuaca.$.w_ket}</div>
             <div class="f-temp">${dcuaca.$.t}°C</div>
-            <div class="f-link"><a href="#">Selengkapnya</a></div>
+            <div class="f-link"><a href="prakicu-detail.html?detail=${item.kecamatan}">Selengkapnya</a></div>
         </div>
         `;
         forecastCard.innerHTML += html;
@@ -81,7 +116,11 @@ function getForecast() {
     .then((response) => response.json())
     .then((jsonResp) => {
       FORECAST_DATA = jsonResp;
-      renderForecast();
+      if (cur_loc == "/prakicu-detail.html") {
+        getDetail();
+      } else {
+        renderForecast();
+      }
     })
     .catch((err) => {
       console.log(`Failed load forecast data: ${err}`);
