@@ -56,7 +56,7 @@
   </div>
 </nav>
 
-  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
 <header id="header" class="d-flex align-items-center">
   <div class="container d-flex align-items-center">
 
@@ -105,16 +105,40 @@
           <main class="container border">
             <div class="row">
                 <div class="section-title">
-                    <h2>Prakiraan Cuaca Hari Ini</h2>
+                    <h2>Detail Prakiraan Cuaca</h2>
+                    <h3 id="kec-txt"></h3>
                 </div>      
-                <div class="card-body">
-                  <img src="img/prakicu1/1.jpeg" width="80%" class="mx-auto d-block" alt="">
-                </div>       
-                        
+                   <!-- ======= Contact Section ======= -->
+                <section id="tabel-cuaca">
+                    <div class="container table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="text-center">
+                              <tr class="table-dark">
+                                <th scope="col" rowspan="2">Waktu</th>
+                                <th scope="col" rowspan="2">Cuaca</th>
+                                <th scope="col" rowspan="2">Deskripsi</th>
+                                <th scope="col" rowspan="2">Suhu Udara</th>
+                                <th scope="col" rowspan="2">Kelembaban</th>
+                                <th scope="col" colspan="2">Angin</th>
+                              </tr>
+                              <tr class="table-dark">
+                                <th scope="col">Arah</th>
+                                <th scope="col">Kecepatan</th>
+                              </tr>
+                            </thead>
+                            <tbody class="text-center" id="fdetail">
+                              <tr>
+                                <td colspan="6"><i>Memuat data ...</i></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                    </div>
+                </section><!-- End Contact Section -->   
+                                    
               
             </main>
           </div>
-        </section><!-- End Prakicu -->
+        </section>
   
 
 
@@ -224,6 +248,7 @@
 
   <!-- Get BMKG Data -->
   <script src="assets/js/jam.js"></script>
+  <script src="assets/js/weather.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
